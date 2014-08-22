@@ -59,6 +59,7 @@ body {
 .choose-mode-div {
 	cursor: pointer;
 	margin-bottom: 50px;
+	padding-bottom: 30px;
 }
 	
 .cover-heading {
@@ -70,6 +71,11 @@ body {
 
 .timer-color {
 	color:black;
+}
+
+.center {
+	margin: 0 auto;
+	text-align: center;
 }
 
 footer {
