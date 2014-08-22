@@ -13,7 +13,7 @@
 		<link href="/lib/bootstrap-3.2.0/css/bootstrap.min.css" rel="stylesheet">
 
 		<!-- Custom styles for this template -->
-		<link href="/stylesheets/cover.css" rel="stylesheet">
+		<link href="/stylesheets/cowbucket.css" rel="stylesheet">
 
 		<!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
 		<!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -32,117 +32,97 @@
 	</head>
 
 	<body>
-		<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-			<div class="container-fluid">
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-						<span class="sr-only">Toggle navigation</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-					<a class="navbar-brand" href="#">Project name</a>
-				</div>
-			</div>
-		</div>
+    <div class="container">
+  		<nav class="navbar navbar-default nav-color" role="navigation">
+        <div class="container-fluid">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <a class="navbar-brand" href="/index" style="color:white;">발.정.너</a>
+          </div>
+        </div><!-- /.container-fluid -->
+      </nav>
 
-		<div class="site-wrapper">
+      <div class="content_wrapper">
+        <div class="ment_wrapper">
+          <label class="cover-heading">안녕, 난 </label>
+          <input type="text" id="name" class="form-control" style="display:inline; width: 150px;">
+          <label class="cover-heading">야. 내 얘기를 들어볼래?</label>
+        </div>
 
-			<div class="site-wrapper-inner">
+        <div class='contents row' style="margin : 10px;">
+          <div class='col-sm-6 active-div choose-mode-div' id='unauto-mode' style="height: 330px;">
+            <h1>선택 모드</h1>
+            <div>
 
-				<div class="cover-container">
+            </div>
+            <div class="active-div-content">
+              다음 페이지로 넘어가는 것 정도는 발표자에게 맡겨둘께요!! 하 블라블
+            </div>
+            <div class="active-div-content" style="margin : 10px;">
+              <select class="selectpicker selectpicker-page">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option>7</option>
+                <option>8</option>
+                <option>9</option>
+                <option>10</option>
+              </select>
+              페이지 발표
+            </div>
+          </div>
 
-					<div class="inner cover">
-						<div>
-							<h1 class="cover-heading" style="display: inline">안녕, 난</h1>
-							<input type="text" style="display: inline">
-							<h1 class="cover-heading" style="display: inline">내 얘기를 들어볼래?</h1>
-						</div>
+          <div class='col-sm-6 choose-mode-div' id='auto-mode' style="height: 330px;">
+            <h1>자동 모드</h1>
+            <div>
 
-						<div class='contents row' style="margin : 10px;">
-							<div class='col-sm-6 unauto-mode active-div' id='unauto-mode' style="height: 330px;">
-								<h1>선택 모드</h1>
-								<div>
-
-								</div>
-								<div class="active-div-content">
-									다음 페이지로 넘어가는 것 정도는 발표자에게 맡겨둘께요!! 하 블라블
-								</div>
-								<div style="margin : 10px;">
-									<select class="selectpicker">
-										<option>1</option>
-										<option>2</option>
-										<option>3</option>
-										<option>4</option>
-										<option>5</option>
-										<option>6</option>
-										<option>7</option>
-										<option>8</option>
-										<option>9</option>
-										<option>10</option>
-									</select>
-									페이지 발표
-								</div>
-							</div>
-
-							<div class='col-sm-6 auto-mode' id='auto-mode' style="height: 330px;">
-								<h1>자동 모드</h1>
-								<div>
-
-								</div>
-								<div class="active-div-content">
-									정해신 시간이 되면 바로바로
-								</div>
-								<div style="margin : 10px;">
-									<select class="selectpicker">
-										<option>1</option>
-										<option>2</option>
-										<option>3</option>
-										<option>4</option>
-										<option>5</option>
-										<option>6</option>
-										<option>7</option>
-										<option>8</option>
-										<option>9</option>
-										<option>10</option>
-									</select>
-									초에
-								</div>
-								<div style="margin : 10px;">
-									<select class="selectpicker">
-										<option>1</option>
-										<option>2</option>
-										<option>3</option>
-										<option>4</option>
-										<option>5</option>
-										<option>6</option>
-										<option>7</option>
-										<option>8</option>
-										<option>9</option>
-										<option>10</option>
-									</select>
-									페이지 발표
-								</div>
-								<div>
-									200초 소요
-								</div>
-							</div>
-						</div>
-
-						<div class="row">
-
-						</div>
-
-						<p class="lead">
-							<a href="/public/views/test.html" class="btn btn-lg btn-default" id="go-app-btn">Let's Start</a>
-						</p>
-					</div>
-				</div>
-
-			</div>
-
-		</div>
-
+            </div>
+            <div class="active-div-content">
+              정해신 시간이 되면 바로바로
+            </div>
+            <div class="active-div-content" style="margin : 10px;">
+              <select class="selectpicker selectpicker-count">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option>7</option>
+                <option>8</option>
+                <option>9</option>
+                <option>10</option>
+              </select>
+              초에
+            </div>
+            <div class="active-div-content" style="margin : 10px;">
+              <select class="selectpicker selectpicker-page">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option>7</option>
+                <option>8</option>
+                <option>9</option>
+                <option>10</option>
+              </select>
+              페이지 발표
+            </div>
+            <div class="active-div-content">
+              200초 소요
+            </div>
+          </div>
+        </div>
+        <p class="lead">
+          <a href="/public/views/test.html" class="btn btn-lg btn-default" id="go-app-btn">Let's Start</a>
+        </p>
+      </div>
+    </div>
 		<!-- Bootstrap core JavaScript
 		================================================== -->
 		<!-- Placed at the end of the document so the pages load faster -->

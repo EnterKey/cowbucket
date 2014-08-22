@@ -9,7 +9,7 @@
 
 		<title>index</title>
 		<meta name="description" content="">
-		<meta name="author" content="발.정.남">
+		<meta name="author" content="발.정.">
 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -32,8 +32,12 @@
       else var width = $(window).width() - 50;
 
       $(function () {
-        var imgtitle = getRandomInt(1, 238);
+
+        for(var i=1; i<<?= count?>; i++) {
+          var imgtitle = getRandomInt(1, 238);
         $('#slider').append("<img src='/image/1/" + imgtitle + ".jpg'>");
+        }
+        
 
         imgtitle = getRandomInt(1, 238);
         $('#slider').append("<img src='/image/1/" + imgtitle + ".jpg'>");

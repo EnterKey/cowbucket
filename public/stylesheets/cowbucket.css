@@ -1,3 +1,7 @@
+.nav-color {
+	background-color: #f52b24;
+}
+
 .timer {
 	text-align: right;
 }
@@ -9,9 +13,40 @@
 
 .content_wrapper {
 	background-color: white;
+	text-align: center;
+	margin: 0 auto;
 }
 
 .text_wrapper {
 	text-align: center;
 	margin: 0 auto;
+}
+
+.ment_wrapper {
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+.active-div {
+	border : 2px solid #f48000;
+}
+
+.active-div h1{
+	color : #f48000
+}
+
+.active-div .active-div-content{
+	color : #f48000
+}
+
+.choose-mode-div {
+	cursor: pointer;
+	margin-bottom: 50px;
+}
+	
+.cover-heading {
+	display: inline;
+	color:#f52b24;
+	margin: 0;
+	font-size: 20pt;
 }
