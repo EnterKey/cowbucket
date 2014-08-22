@@ -1,3 +1,19 @@
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+
+@font-face {
+   font-family:'BM-JUA';
+   src:url('/font/BM-JUA.ttf') format('truetype');
+}
+
+.BM-JUA {
+   font-family: 'BM-JUA';
+   font-size: 25px;
+}
+
+body {
+	font-family:'Nanum Gothic';
+}
+
 .nav-color {
 	background-color: #f52b24;
 }
