@@ -11,11 +11,11 @@ common.setEventListener = function() {
 			time;
 		
 		if($('.active-div').hasClass('unauto-mode')) {
-			count = $(".selectpicker-page option:selected").val() || 1;
+			count = $("#unauto-mode-selectpicker-page option:selected").val() || 1;
 			requestURL = requestURL + '/' + name + '/' + count + '/unauto';
 		} else {
-			time = $(".selectpicker-count option:selected").val() || 1;
-			count = $(".selectpicker-page option:selected").val() || 1;
+			time = $("#auto-mode-selectpicker-count option:selected").val() || 1;
+			count = $("#auto-mode-selectpicker-page option:selected").val() || 1;
 		  	requestURL = requestURL + '/' + name + '/' + count + '/auto' + '/' + time;
 		}
 		
@@ -36,16 +36,16 @@ common.setEventListener = function() {
 		}
 	});
 	
-	$('#unauto-mode > .selectpicker-page').change(function(){
-        var page = $(".selectpicker-page option:selected").val();
-        var time = $(".selectpicker-time option:selected").val();
-        alert(page + ', ' + time);
+	$('#auto-mode-selectpicker-count').change(function(){
+        var page = $("#auto-mode-selectpicker-count option:selected").val();
+        var time = $("#auto-mode-selectpicker-page option:selected").val();
+        $('.active-div-content-time').html(page*time);
     });
     
-    $('#unauto-mode > .selectpicker-time').change(function(){
-        var page = $(".selectpicker-page option:selected").val();
-        var time = $(".selectpicker-time option:selected").val();
-        alert(page + ', ' + time);
+    $('#auto-mode-selectpicker-page').change(function(){
+        var page = $("#auto-mode-selectpicker-count option:selected").val() || 1;
+        var time = $("#auto-mode-selectpicker-page option:selected").val() || 1;
+        $('.active-div-content-time').html(page*time);
     });
 };
 	
