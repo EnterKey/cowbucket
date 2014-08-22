@@ -11,11 +11,11 @@ common.setEventListener = function() {
 			time;
 		
 		if($('.active-div').hasClass('unauto-mode')) {
-			count = $(".selectpicker-page option:selected").val() || 1;
+			count = $("#unauto-mode-selectpicker-page option:selected").val() || 1;
 			requestURL = requestURL + '/' + name + '/' + count + '/unauto';
 		} else {
-			time = $(".selectpicker-count option:selected").val() || 1;
-			count = $(".selectpicker-page option:selected").val() || 1;
+			time = $("#auto-mode-selectpicker-count option:selected").val() || 1;
+			count = $("#auto-mode-selectpicker-page option:selected").val() || 1;
 		  	requestURL = requestURL + '/' + name + '/' + count + '/auto' + '/' + time;
 		}
 		
