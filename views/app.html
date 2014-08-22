@@ -7,7 +7,7 @@
 		Remove this if you use the .htaccess -->
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-		<title>index</title>
+		<title>발정너</title>
 		<meta name="description" content="">
 		<meta name="author" content="발.정.">
 
@@ -41,10 +41,10 @@
         <div class="row">
           <div class="col-xs-9 col-md-6">
             <h3><span id="time"></span></h3>
-            <h5 id="mode"></h5>
+            <h5 id="time"></h5>
           </div>
           <div class="col-xs-9 col-md-6">
-            
+            <h3 id="mode"></h3>
           </div>
         </div>
 <!--         <div class="timer">
@@ -88,8 +88,8 @@
             //prevnextAutoHide: false
           });
 
-          $('#mode').append(interval + "초에 하나씩 넘어갑니다.");
-
+          $('#time').append(interval + "초에 하나씩 넘어갑니다.");
+          $('#mode').append("자동모드");
         }
         else {
           $("#slider").excoloSlider({
@@ -102,7 +102,7 @@
             prevnextAutoHide: false
           });
 
-          //$('#mode').append("수동모드");
+          $('#mode').append("수모드");
         }
         
         
