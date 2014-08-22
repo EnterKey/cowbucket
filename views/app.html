@@ -20,12 +20,50 @@
     <link href="/lib/bootstrap-3.2.0/css/bootstrap.css" rel="stylesheet">
     <link href="/stylesheets/cowbucket.css" rel="stylesheet">
     <link href="/stylesheets/jquery.excoloSlider.css" rel="stylesheet">
+	</head>
 
-    <script type="text/javascript" src="/lib/jquery/jquery-1.9.1.js"></script>
-    <script type="text/javascript" src="/lib/bootstrap-3.2.0/js/bootstrap.js"></script>
-    <script type="text/javascript" src="/lib/scripts/jquery.excoloSlider.js"></script>
-    <script type="text/javascript" src="/lib/scripts/stopwatch.js"></script>
+	<body>
+		<div class="container">
+      <nav class="navbar navbar-default nav-color" role="navigation">
+        <div class="container-fluid">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <a class="navbar-brand" href="/index" style="color:white;">발.정.너</a>
+          </div>
+        </div><!-- /.container-fluid -->
+      </nav>
 
+			<div class="content_wrapper">
+        <div class="slider_wrapper">
+          <div id="slider">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-9 col-md-6">
+            <h3><span id="time"></span></h3>
+            <h5 id="mode"></h5>
+          </div>
+          <div class="col-xs-9 col-md-6">
+            
+          </div>
+        </div>
+<!--         <div class="timer">
+          <h3><span id="time"></span></h3>
+          <button type="button" class="btn btn-default" onclick="start()">Start</button>
+          <button type="button" class="btn btn-default" onclick="stop()">Stop</button>
+          <button type="button" class="btn btn-default" onclick="reset()">Reset</button>
+        </div> -->
+      </div>
+
+      <footer>
+        &copy; Copyright by 발.정.너
+      </footer>
+		</div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="/lib/bootstrap-3.2.0/js/bootstrap.min.js"></script>
+    <script src="/lib/scripts/jquery.excoloSlider.js"></script>
+    <script src="/lib/scripts/stopwatch.js"></script>
 
     <script type="text/javascript">
       if($(window).width() > 650) var width = 600;
@@ -50,7 +88,7 @@
             //prevnextAutoHide: false
           });
 
-          $('#mode').append("자동모드. " + interval + "초에 하나씩 넘어갑니다.");
+          $('#mode').append(interval + "초에 하나씩 넘어갑니다.");
 
         }
         else {
@@ -64,7 +102,7 @@
             prevnextAutoHide: false
           });
 
-          $('#mode').append("수동모드");
+          //$('#mode').append("수동모드");
         }
         
         
@@ -79,43 +117,5 @@
 
     </script>
 
-	</head>
-
-	<body>
-		<div class="container">
-      <nav class="navbar navbar-default nav-color" role="navigation">
-        <div class="container-fluid">
-          <!-- Brand and toggle get grouped for better mobile display -->
-          <div class="navbar-header">
-            <a class="navbar-brand" href="/index" style="color:white;">발.정.너</a>
-          </div>
-        </div><!-- /.container-fluid -->
-      </nav>
-
-			<div class="content_wrapper">
-        <div class="slider_wrapper">
-          <div id="slider">
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-xs-9 col-md-6">
-            <h3><span id="time"></span></h3>
-          </div>
-          <div class="col-xs-9 col-md-6">
-            <h3 id="mode"></h3>
-          </div>
-        </div>
-<!--         <div class="timer">
-          <h3><span id="time"></span></h3>
-          <button type="button" class="btn btn-default" onclick="start()">Start</button>
-          <button type="button" class="btn btn-default" onclick="stop()">Stop</button>
-          <button type="button" class="btn btn-default" onclick="reset()">Reset</button>
-        </div> -->
-      </div>
-
-      <footer>
-        &copy; Copyright by 발.정.너
-      </footer>
-		</div>
 	</body>
 </html>
