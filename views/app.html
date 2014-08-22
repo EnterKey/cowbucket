@@ -9,7 +9,7 @@
 
 		<title>index</title>
 		<meta name="description" content="">
-		<meta name="author" content="발.정.">
+		<meta name="author" content="발.정.남">
 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -28,19 +28,44 @@
 
 
     <script type="text/javascript">
+      if($(window).width() > 650) var width = 600;
+      else var width = $(window).width() - 50;
+
       $(function () {
-        $("#slider").excoloSlider({
+        if("<?= type ?>" == "auto") {
+          var interval = <?= time ?>;
+          $("#slider").excoloSlider({
             mouseNav: false,
-            interval: 1000, // = 5 seconds
-            playReverse: true,
-            width: 500,
-            height: 400
-        });
+            interval: interval*1000, // = interval seconds
+            //playReverse: true,
+            width: width,
+            height: width * 4/5,
+            autoSize: false,
+            //prevnextAutoHide: false
+          });
+
+          $('#mode').append("자동모드 / " + interval + "초에 하나씩 넘어갑니다.");
+
+        }
+        else {
+          $("#slider").excoloSlider({
+            mouseNav: false,
+            interval: 10000000000, // = limit
+            //playReverse: true,
+            width: width,
+            height: width * 4/5,
+            autoSize: false,
+            prevnextAutoHide: false
+          });
+
+          $('#mode').append("수동모드");
+        }
+        
+        show();start();
+        $(".slider_wrapper").width(width);
+
       });
 
-      $(document).ready(function() {
-        show();start();
-      }); 
     </script>
 
 	</head>
@@ -57,27 +82,31 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="../index">Cowbucket</a>
+            <a class="navbar-brand" href="/index">발.정.남</a>
           </div>
         </div><!-- /.container-fluid -->
       </nav>
 
-			<div class="jumbotron">
-        <h3>발.정.남 <?= type ?> <?= time ?> </h3>
-        <h2>Time: <span id="time"></span></h2>
-        <button type="button" class="btn btn-default" onclick="start()">Start</button>
-        <button type="button" class="btn btn-default" onclick="stop()">Stop</button>
-        <button type="button" class="btn btn-default" onclick="reset()">Reset</button>
-        <div id="slider">
-          <img src="/image/image1.jpeg">
-          <img src="/image/image2.jpg">
-          <img src="/image/image3.jpg">
+			<div class="content_wrapper">
+        <div class="text_wrapper">
+          <h4 id="mode"></h4>
         </div>
-        
+        <div class="slider_wrapper">
+          <div id="slider">
+            <img src="/image/image1.jpeg">
+            <img src="/image/image2.jpg">
+            <img src="/image/image3.jpg">
+          </div>
+        </div>
+        <div class="timer">
+          <h3>경과시간: <span id="time"></span></h3>
+          <button type="button" class="btn btn-default" onclick="start()">Start</button>
+          <button type="button" class="btn btn-default" onclick="stop()">Stop</button>
+          <button type="button" class="btn btn-default" onclick="reset()">Reset</button>
+        </div>
       </div>
 
 			<footer>
-
 				&copy; Copyright by 발.정.남
 			</footer>
 		</div>

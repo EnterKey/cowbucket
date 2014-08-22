@@ -1,0 +1,17 @@
+.timer {
+	text-align: right;
+}
+
+.slider_wrapper {
+	text-align: center;
+	margin: 0 auto;
+}
+
+.content_wrapper {
+	background-color: white;
+}
+
+.text_wrapper {
+	text-align: center;
+	margin: 0 auto;
+}
