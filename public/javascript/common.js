@@ -26,6 +26,12 @@ common.setEventListener = function() {
 		if(!$('#auto-mode').hasClass('active-div')) {
 			$('#unauto-mode').removeClass('active-div');
 			$('#auto-mode').addClass('active-div');
+
+      $('#choose-unauto-image').empty();
+      $('#choose-unauto-image').append('<img src="/image/illu_1_black.png" width="250px;">');
+
+      $('#choose-auto-image').empty();
+      $('#choose-auto-image').append('<img src="/image/illu_2.png" width="250px;">');
 		}
 	});
 	
@@ -33,6 +39,12 @@ common.setEventListener = function() {
 		if(!$('#unauto-mode').hasClass('active-div')) {
 			$('#auto-mode').removeClass('active-div');
 			$('#unauto-mode').addClass('active-div');
+
+      $('#choose-unauto-image').empty();
+      $('#choose-unauto-image').append('<img src="/image/illu_1.png" width="250px;">');
+
+      $('#choose-auto-image').empty();
+      $('#choose-auto-image').append('<img src="/image/illu_2_black.png" width="250px;">');
 		}
 	});
 	

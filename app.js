@@ -53,6 +53,7 @@ if ('development' === app.get('env')) {
 }
 
 app.get('/', routes.index);
+app.get('/index', routes.index);
 app.get('/app/:name/:count/:type/:time?', routes.app);
 
 app.use(app.router);
