@@ -17,9 +17,9 @@
 		<link rel="shortcut icon" href="/favicon.ico">
 		<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
-    <link rel="stylesheet" type="text/css" href="/lib/bootstrap-3.2.0/css/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="/stylesheets/cowbucket.css">
-    <link rel="stylesheet" type="text/css" href="/stylesheets/jquery.excoloSlider.css">
+    <link href="/lib/bootstrap-3.2.0/css/bootstrap.css" rel="stylesheet">
+    <link href="/stylesheets/cowbucket.css" rel="stylesheet">
+    <link href="/stylesheets/jquery.excoloSlider.css" rel="stylesheet">
 
     <script type="text/javascript" src="/lib/jquery/jquery-1.9.1.js"></script>
     <script type="text/javascript" src="/lib/bootstrap-3.2.0/js/bootstrap.js"></script>
@@ -33,17 +33,10 @@
 
       $(function () {
 
-        for(var i=1; i<<?= count?>; i++) {
+        for(var i=1; i<<?= count?>+1; i++) {
           var imgtitle = getRandomInt(1, 238);
         $('#slider').append("<img src='/image/1/" + imgtitle + ".jpg'>");
         }
-        
-
-        imgtitle = getRandomInt(1, 238);
-        $('#slider').append("<img src='/image/1/" + imgtitle + ".jpg'>");
-
-        imgtitle = getRandomInt(1, 238);
-        $('#slider').append("<img src='/image/1/" + imgtitle + ".jpg'>");
 
         if("<?= type ?>" == "auto") {
           var interval = <?= time ?>;
@@ -57,7 +50,7 @@
             //prevnextAutoHide: false
           });
 
-          $('#mode').append("자동모드 / " + interval + "초에 하나씩 넘어갑니다.");
+          $('#mode').append("자동모드. " + interval + "초에 하나씩 넘어갑니다.");
 
         }
         else {
@@ -90,40 +83,39 @@
 
 	<body>
 		<div class="container">
-      <nav class="navbar navbar-default" role="navigation">
+      <nav class="navbar navbar-default nav-color" role="navigation">
         <div class="container-fluid">
           <!-- Brand and toggle get grouped for better mobile display -->
           <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="/index">발.정.남</a>
+            <a class="navbar-brand" href="/index" style="color:white;">발.정.너</a>
           </div>
         </div><!-- /.container-fluid -->
       </nav>
 
 			<div class="content_wrapper">
-        <div class="text_wrapper">
-          <h4 id="mode"></h4>
-        </div>
         <div class="slider_wrapper">
           <div id="slider">
           </div>
         </div>
-        <div class="timer">
-          <h3>경과시간: <span id="time"></span></h3>
+        <div class="row">
+          <div class="col-xs-9 col-md-6">
+            <h3><span id="time"></span></h3>
+          </div>
+          <div class="col-xs-9 col-md-6">
+            <h3 id="mode"></h3>
+          </div>
+        </div>
+<!--         <div class="timer">
+          <h3><span id="time"></span></h3>
           <button type="button" class="btn btn-default" onclick="start()">Start</button>
           <button type="button" class="btn btn-default" onclick="stop()">Stop</button>
           <button type="button" class="btn btn-default" onclick="reset()">Reset</button>
-        </div>
+        </div> -->
       </div>
 
-			<footer>
-				&copy; Copyright by 발.정.남
-			</footer>
+      <footer>
+        &copy; Copyright by 발.정.너
+      </footer>
 		</div>
 	</body>
 </html>
