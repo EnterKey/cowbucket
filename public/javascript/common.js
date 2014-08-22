@@ -5,12 +5,20 @@ if ( typeof (common) == typeof (undefined)) {
 common.setEventListener = function() {
 	$('#go-app-btn').click(function(e) {
 		e.preventDefault();
-		window.location.replace("/app");
+		var requestURL = '/app';
+		var name = $('#name').val();
+		var count = $(".selectpicker-page option:selected").val();
+		
+		if($('.active-div').hasClass('unauto-mode')) {
+			requestURL = requestURL + '/' + name + '/' + count + '/unauto';
+		} else {
+			var time = $(".selectpicker-count option:selected").val();
+		  	// requestURL = requestURL + '/' + name + '/' + count + '/auto' + '?time='+time;
+		  	requestURL = requestURL + '/' + name + '/' + count + '/auto' + '/' + time;
+		}
+		
+		window.location.replace(requestURL);
 	});
-	
-	// $('.contents > div').on('mouseover', function(e) {
-// 		
-	// });
 	
 	$('#auto-mode').on('mouseover', function() {
 		if(!$('#auto-mode').hasClass('active-div')) {
