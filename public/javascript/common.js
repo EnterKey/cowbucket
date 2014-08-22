@@ -5,15 +5,17 @@ if ( typeof (common) == typeof (undefined)) {
 common.setEventListener = function() {
 	$('#go-app-btn').click(function(e) {
 		e.preventDefault();
-		var requestURL = '/app';
-		var name = $('#name').val();
-		var count = $(".selectpicker-page option:selected").val();
+		var requestURL = '/app', 
+			name = $('#name').val() || '김소마', 
+			count, 
+			time;
 		
 		if($('.active-div').hasClass('unauto-mode')) {
+			count = $(".selectpicker-page option:selected").val() || 1;
 			requestURL = requestURL + '/' + name + '/' + count + '/unauto';
 		} else {
-			var time = $(".selectpicker-count option:selected").val();
-		  	// requestURL = requestURL + '/' + name + '/' + count + '/auto' + '?time='+time;
+			time = $(".selectpicker-count option:selected").val() || 1;
+			count = $(".selectpicker-page option:selected").val() || 1;
 		  	requestURL = requestURL + '/' + name + '/' + count + '/auto' + '/' + time;
 		}
 		
@@ -33,6 +35,18 @@ common.setEventListener = function() {
 			$('#unauto-mode').addClass('active-div');
 		}
 	});
+	
+	$('#unauto-mode > .selectpicker-page').change(function(){
+        var page = $(".selectpicker-page option:selected").val();
+        var time = $(".selectpicker-time option:selected").val();
+        alert(page + ', ' + time);
+    });
+    
+    $('#unauto-mode > .selectpicker-time').change(function(){
+        var page = $(".selectpicker-page option:selected").val();
+        var time = $(".selectpicker-time option:selected").val();
+        alert(page + ', ' + time);
+    });
 };
 	
 
