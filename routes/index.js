@@ -8,5 +8,5 @@ exports.index = function(req, res) {
 };
 
 exports.app = function(req, res) {
-	res.render('app.html', { type:req.params.type, time:req.params.time } );
+	res.render('app.html', { count:req.params.count, type:req.params.type, time:req.params.time } );
 };

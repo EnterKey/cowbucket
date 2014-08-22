@@ -32,6 +32,15 @@
       else var width = $(window).width() - 50;
 
       $(function () {
+        var imgtitle = getRandomInt(1, 238);
+        $('#slider').append("<img src='/image/1/" + imgtitle + ".jpg'>");
+
+        imgtitle = getRandomInt(1, 238);
+        $('#slider').append("<img src='/image/1/" + imgtitle + ".jpg'>");
+
+        imgtitle = getRandomInt(1, 238);
+        $('#slider').append("<img src='/image/1/" + imgtitle + ".jpg'>");
+
         if("<?= type ?>" == "auto") {
           var interval = <?= time ?>;
           $("#slider").excoloSlider({
@@ -61,10 +70,15 @@
           $('#mode').append("수동모드");
         }
         
-        show();start();
+        
         $(".slider_wrapper").width(width);
+        show();start();
 
       });
+
+      function getRandomInt(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+      }
 
     </script>
 
@@ -93,9 +107,6 @@
         </div>
         <div class="slider_wrapper">
           <div id="slider">
-            <img src="/image/image1.jpeg">
-            <img src="/image/image2.jpg">
-            <img src="/image/image3.jpg">
           </div>
         </div>
         <div class="timer">
