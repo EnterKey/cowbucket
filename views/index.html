@@ -1,68 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="">
+		<meta name="author" content="">
 
-    <title>Cover Template for Bootstrap</title>
+		<title>Cover Template for Bootstrap</title>
 
-    <!-- Bootstrap core CSS -->
-    <link href="/lib/bootstrap-3.2.0/css/bootstrap.min.css" rel="stylesheet">
+		<!-- Bootstrap core CSS -->
+		<link href="/lib/bootstrap-3.2.0/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Custom styles for this template -->
-    <link href="/stylesheets/cover.css" rel="stylesheet">
+		<!-- Custom styles for this template -->
+		<link href="/stylesheets/cover.css" rel="stylesheet">
 
-    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
-    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-    <script src="/lib/bootstrap-3.2.0/assets/js/ie-emulation-modes-warning.js"></script>
+		<!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+		<!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+		<script src="/lib/bootstrap-3.2.0/assets/js/ie-emulation-modes-warning.js"></script>
 
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="/lib/bootstrap-3.2.0/assets/js/ie10-viewport-bug-workaround.js"></script>
+		<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+		<script src="/lib/bootstrap-3.2.0/assets/js/ie10-viewport-bug-workaround.js"></script>
 
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-  </head>
+		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
 
-  <body>
+		<link href="/lib/bootstrap.select/css/bootstrap-select.min.css" rel="stylesheet">
+	</head>
 
-    <div class="site-wrapper">
+	<body>
+		<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#">Project name</a>
+				</div>
+			</div>
+		</div>
 
-      <div class="site-wrapper-inner">
+		<div class="site-wrapper">
 
-        <div class="cover-container">
+			<div class="site-wrapper-inner">
 
-          <div class="inner cover">
-            <h1 class="cover-heading">Cow Bucket</h1>
-            <p class="lead">Cover is a one-page template for building simple and beautiful home pages. Download, edit the text, and add your own fullscreen background photo to make it your own.</p>
-            <p class="lead">
-              <a href="/public/views/test.html" class="btn btn-lg btn-default" id="go-app-btn">Let's Start</a>
-            </p>
-          </div>
+				<div class="cover-container">
 
-          <!-- <div class="mastfoot">
-            <div class="inner">
-              <p>Cover template for <a href="http://getbootstrap.com">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
-            </div>
-          </div> -->
+					<div class="inner cover">
+						<div>
+							<h1 class="cover-heading" style="display: inline">안녕, 난</h1>
+							<input type="text" style="display: inline">
+							<h1 class="cover-heading" style="display: inline">내 얘기를 들어볼래?</h1>
+						</div>
 
-        </div>
+						<div class='contents row' style="margin : 10px;">
+							<div class='col-sm-6 unauto-mode active-div' id='unauto-mode' style="height: 330px;">
+								<h1>선택 모드</h1>
+								<div>
 
-      </div>
+								</div>
+								<div class="active-div-content">
+									다음 페이지로 넘어가는 것 정도는 발표자에게 맡겨둘께요!! 하 블라블
+								</div>
+								<div style="margin : 10px;">
+									<select class="selectpicker">
+										<option>1</option>
+										<option>2</option>
+										<option>3</option>
+										<option>4</option>
+										<option>5</option>
+										<option>6</option>
+										<option>7</option>
+										<option>8</option>
+										<option>9</option>
+										<option>10</option>
+									</select>
+									페이지 발표
+								</div>
+							</div>
 
-    </div>
+							<div class='col-sm-6 auto-mode' id='auto-mode' style="height: 330px;">
+								<h1>자동 모드</h1>
+								<div>
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <!-- http://127.0.0.1:8020/cowbucket/public/ -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="/lib/bootstrap-3.2.0/js/bootstrap.min.js"></script>
-    <script src="/javascript/common.js"></script>
-  </body>
+								</div>
+								<div class="active-div-content">
+									정해신 시간이 되면 바로바로
+								</div>
+								<div style="margin : 10px;">
+									<select class="selectpicker">
+										<option>1</option>
+										<option>2</option>
+										<option>3</option>
+										<option>4</option>
+										<option>5</option>
+										<option>6</option>
+										<option>7</option>
+										<option>8</option>
+										<option>9</option>
+										<option>10</option>
+									</select>
+									초에
+								</div>
+								<div style="margin : 10px;">
+									<select class="selectpicker">
+										<option>1</option>
+										<option>2</option>
+										<option>3</option>
+										<option>4</option>
+										<option>5</option>
+										<option>6</option>
+										<option>7</option>
+										<option>8</option>
+										<option>9</option>
+										<option>10</option>
+									</select>
+									페이지 발표
+								</div>
+								<div>
+									200초 소요
+								</div>
+							</div>
+						</div>
+
+						<div class="row">
+
+						</div>
+
+						<p class="lead">
+							<a href="/public/views/test.html" class="btn btn-lg btn-default" id="go-app-btn">Let's Start</a>
+						</p>
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+
+		<!-- Bootstrap core JavaScript
+		================================================== -->
+		<!-- Placed at the end of the document so the pages load faster -->
+		<!-- http://127.0.0.1:8020/cowbucket/public/ -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script src="/lib/bootstrap-3.2.0/js/bootstrap.min.js"></script>
+		<script src="/lib/bootstrap.select/js/bootstrap-select.min.js"></script>
+		<script src="/javascript/common.js"></script>
+	</body>
 </html>

@@ -2,6 +2,8 @@
  * Globals
  */
 
+
+
 /* Links */
 a,
 a:focus,
@@ -160,4 +162,16 @@ body {
   .cover-container {
     width: 700px;
   }
+}
+
+.active-div {
+	border : 1px solid red;
+}
+
+.active-div h1{
+	color : #f48000
+}
+
+.active-div .active-div-content{
+	color : #f48000
 }
