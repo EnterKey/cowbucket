@@ -24,7 +24,7 @@
     <script type="text/javascript" src="/lib/jquery/jquery-1.9.1.js"></script>
     <script type="text/javascript" src="/lib/bootstrap-3.2.0/js/bootstrap.js"></script>
     <script type="text/javascript" src="/lib/javascript/jquery.excoloSlider.js"></script>
-
+    <script type="text/javascript" src="/lib/javascript/stopwatch.js"></script>
 
 
     <script type="text/javascript">
@@ -32,16 +32,14 @@
         $("#slider").excoloSlider({
             mouseNav: false,
             interval: 1000, // = 5 seconds
-            playReverse: true
+            playReverse: true,
+            width: 500,
+            height: 400
         });
       });
 
       $(document).ready(function() {
-        // $("#slider").excoloSlider({
-        //   mouseNav: false,
-        //   interval: 5000, // = 5 seconds
-        //   playReverse: true
-        // });
+        show();start();
       }); 
     </script>
 
@@ -65,16 +63,21 @@
       </nav>
 
 			<div class="jumbotron">
-        <h1>Navbar example</h1>
-        <p>This example is a quick exercise to illustrate how the default, static navbar and fixed to top navbar work. It includes the responsive CSS and HTML, so it also adapts to your viewport and device.</p>
+        <h3>발.정.남 <?= type ?> <?= time ?> </h3>
+        <h2>Time: <span id="time"></span></h2>
+        <button type="button" class="btn btn-default" onclick="start()">Start</button>
+        <button type="button" class="btn btn-default" onclick="stop()">Stop</button>
+        <button type="button" class="btn btn-default" onclick="reset()">Reset</button>
         <div id="slider">
           <img src="/image/image1.jpeg">
           <img src="/image/image2.jpg">
           <img src="/image/image3.jpg">
         </div>
+        
       </div>
 
 			<footer>
+
 				&copy; Copyright by 발.정.남
 			</footer>
 		</div>
